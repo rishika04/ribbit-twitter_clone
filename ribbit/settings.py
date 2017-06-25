@@ -28,7 +28,7 @@ SECRET_KEY = '^z+#nx!s$+(+q2d!#7uoui*=vxfpcuj-wt-14^h6s&w)g9+gvy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mighty-garden-67676.herokuapp.com']
 
 
 # Application definition
