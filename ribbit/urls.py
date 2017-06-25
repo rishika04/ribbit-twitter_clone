@@ -31,6 +31,3 @@ urlpatterns = [
     url(r'^users/(?P<username>\w{0,30})/$', views.users),
     url(r'^follow$', views.follow),
 ]
-urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    )
