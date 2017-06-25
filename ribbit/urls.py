@@ -17,6 +17,8 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from ribbit_app import views
 
+from ribbit import settings
+
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index), # root
@@ -29,3 +31,6 @@ urlpatterns = [
     url(r'^users/(?P<username>\w{0,30})/$', views.users),
     url(r'^follow$', views.follow),
 ]
+urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
