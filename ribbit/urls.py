@@ -22,6 +22,10 @@ urlpatterns = [
     url(r'^$', views.index), # root
     url(r'^login$', views.login_view), # login
     url(r'^logout$', views.logout_view), # logout
-    url(r'^signup$', views.signup), # signup
+    url(r'^signup$', views.signup),
+    url(r'^ribbits$', views.public), 
     url(r'^submit$', views.submit),
+    url(r'^users/$', views.users),
+    url(r'^users/(?P<username>\w{0,30})/$', views.users),
+    url(r'^follow$', views.follow),
 ]
